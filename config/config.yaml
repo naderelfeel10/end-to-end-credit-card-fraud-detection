@@ -1,0 +1,15 @@
+data:
+  path: "data/creditcard.csv"
+  test_size: 0.2
+  random_state: 42
+  sampling_strategy: 0.1
+
+model:
+  type: "xgboost"
+  params:
+    scale_pos_weight: 14
+    n_estimators: 200
+
+output:
+  model_path: "models/xgb_model.pkl"
+  results_log: "experiments/results.csv"
